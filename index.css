@@ -19,7 +19,9 @@ canvas{
     right: 20px;
     z-index: 1;
     color:white;
+    text-shadow: 1px 1px 5px black;
     font-size: 25px;
+    font-weight: bold;
 }
 
 .debug-values-container{
@@ -28,7 +30,9 @@ canvas{
     right: 20px;
     z-index: 1;
     color:white;
+    text-shadow: 1px 1px 5px black;
     font-size: 20px;
+    font-weight: bold;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
