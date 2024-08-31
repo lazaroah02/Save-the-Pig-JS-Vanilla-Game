@@ -60,9 +60,9 @@ function spawnPowerUps(){
     const y = Math.random()*canvas.height
     let powerups = [
         null, null,
-        new DecreaseEnemiesSpeed(x, y, 10, "blue"),
+        new DecreaseEnemiesSpeed(x, y, 30, "transparent"),
         null, null,
-        new IncreaseShuttingSpeed(x, y, 10, "purple"),
+        new IncreaseShuttingSpeed(x, y, 30, "transparent"),
         null, null,
         new IncreasePlayerSpeed(x, y, 30, "transparent"),
         null, null

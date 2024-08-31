@@ -174,6 +174,11 @@ class DecreaseEnemiesSpeed extends PowerUp{
         this.enemiesSpeed = value
     }
 
+    draw(){
+        super.draw()
+        ctx.drawImage(spiralImage, this.x, this.y, this.size, this.size)
+    }
+
     power(){
         let lastEnemiesSpeed = enemiesSpeed
         enemiesSpeed = this.enemiesSpeed
@@ -190,6 +195,11 @@ class IncreaseShuttingSpeed extends PowerUp{
     constructor(x, y, size, color, duration = 5000){
         super(x, y, size, color)
         this.duration = duration
+    }
+
+    draw(){
+        super.draw()
+        ctx.drawImage(fireImage, this.x-5, this.y-5, this.size+10, this.size+10)
     }
 
     power(){

@@ -11,6 +11,8 @@ const pigImage = document.getElementById('pig-image')
 const knifeImage = document.getElementById('knife-image')
 const cacaImage = document.getElementById('caca-image')
 const lightningImage = document.getElementById('lightning-image')
+const spiralImage = document.getElementById('spiral-image')
+const fireImage = document.getElementById('fire-image')
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
