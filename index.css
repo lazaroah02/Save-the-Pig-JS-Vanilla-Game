@@ -8,6 +8,9 @@ body, html {
 canvas{
     background-color: rgb(0, 0, 0);
     cursor: crosshair;
+    background-image: url('./assets/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .score-container{

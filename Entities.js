@@ -45,7 +45,7 @@ class Player extends Entity{
 
     draw(){
         super.draw()
-        ctx.drawImage(pigImage, this.x, this.y, this.size+10, this.size+10)
+        ctx.drawImage(pigImage, this.x-15, this.y-20, this.size+35, this.size+35)
     }
     
     update(){
@@ -82,7 +82,7 @@ class Enemy extends Entity{
 
     draw(){
         super.draw()
-        ctx.drawImage(knifeImage, this.x, this.y, this.size, this.size)
+        ctx.drawImage(knifeImage, this.x-5, this.y-15, this.size+20, this.size+20)
     }
 
     update(player){

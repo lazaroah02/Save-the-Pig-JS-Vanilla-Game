@@ -14,7 +14,7 @@ const cacaImage = document.getElementById('caca-image')
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-let player = new Player(canvas.width/2, canvas.height/2, 50, playerSpeed, "transparent")
+let player = new Player(canvas.width/2, canvas.height/2, 30, playerSpeed, "transparent")
 
 if(DEBUG_MODE === false){
     document.getElementById("debug-values-container").style.display = 'none'

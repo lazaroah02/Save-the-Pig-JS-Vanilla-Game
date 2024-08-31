@@ -45,7 +45,7 @@ function spawnEnemies() {
         const y = player.y + distance * Math.sin(angle);
 
         // Create a new enemy at the calculated coordinates
-        let newEnemy = new Enemy(x, y, 40, enemiesSpeed, "transparent");
+        let newEnemy = new Enemy(x, y, 30, enemiesSpeed, "transparent");
 
         // Check that the new enemy does not collide with the player immediately
         if (player.checkCollision(newEnemy) === false) {
