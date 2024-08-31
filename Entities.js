@@ -173,7 +173,7 @@ class DecreaseEnemiesSpeed extends PowerUp{
     constructor(x, y, size, color, duration = 3000, enemiesSpeedValue = 0.1){
         super(x, y, size, color)
         this.duration = duration
-        this.enemiesSpeedValue = value
+        this.enemiesSpeedValue = enemiesSpeedValue
     }
 
     draw(){

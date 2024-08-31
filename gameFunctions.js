@@ -56,6 +56,7 @@ function spawnEnemies() {
 }
 
 function spawnPowerUps(){
+    console.log("aa")
     const x = Math.random()*canvas.width
     const y = Math.random()*canvas.height
     let powerups = [
