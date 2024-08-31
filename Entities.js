@@ -42,6 +42,11 @@ class Player extends Entity{
             this.draw()
         }
     }
+
+    draw(){
+        super.draw()
+        ctx.drawImage(pigImage, this.x, this.y, this.size+10, this.size+10)
+    }
     
     update(){
         this.draw()
@@ -75,6 +80,11 @@ class Enemy extends Entity{
         }
     }
 
+    draw(){
+        super.draw()
+        ctx.drawImage(knifeImage, this.x, this.y, this.size, this.size)
+    }
+
     update(player){
         this.move(player)
         this.draw()
@@ -98,6 +108,11 @@ class Bullet extends Entity{
         this.vx = (dx / distance) * speed;
         this.vy = (dy / distance) * speed;
 
+    }
+
+    draw(){
+        super.draw()
+        ctx.drawImage(cacaImage, this.x, this.y, this.size, this.size)
     }
 
     move(){

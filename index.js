@@ -7,11 +7,14 @@ const debugSpeedValue = document.getElementById('debug-speed-value');
 const debugEnemiesValue = document.getElementById('debug-enemies-values');
 const debugEnemiesSpeedValue = document.getElementById('debug-enemies-speed-values');
 const showControlsButton = document.getElementById('show-controls-button');
+const pigImage = document.getElementById('pig-image')
+const knifeImage = document.getElementById('knife-image')
+const cacaImage = document.getElementById('caca-image')
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-let player = new Player(canvas.width/2, canvas.height/2, 30, playerSpeed, "white")
+let player = new Player(canvas.width/2, canvas.height/2, 50, playerSpeed, "transparent")
 
 if(DEBUG_MODE === false){
     document.getElementById("debug-values-container").style.display = 'none'
