@@ -17,6 +17,8 @@ if(DEBUG_MODE === false){
     document.getElementById("debug-values-container").style.display = 'none'
 }
 
+showGameControls()
+
 update()
 setInterval(spawnEnemies, 1000)
 setInterval(spawnPowerUps, 4000)
