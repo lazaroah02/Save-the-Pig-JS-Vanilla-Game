@@ -10,6 +10,7 @@ const showControlsButton = document.getElementById('show-controls-button');
 const pigImage = document.getElementById('pig-image')
 const knifeImage = document.getElementById('knife-image')
 const cacaImage = document.getElementById('caca-image')
+const lightningImage = document.getElementById('lightning-image')
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;

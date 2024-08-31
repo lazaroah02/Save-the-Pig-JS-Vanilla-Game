@@ -64,7 +64,7 @@ function spawnPowerUps(){
         null, null,
         new IncreaseShuttingSpeed(x, y, 10, "purple"),
         null, null,
-        new IncreasePlayerSpeed(x, y, 10, "yellow"),
+        new IncreasePlayerSpeed(x, y, 30, "transparent"),
         null, null
     ]
     let selectedPowerUp = powerups[Math.floor(Math.random() * powerups.length)]

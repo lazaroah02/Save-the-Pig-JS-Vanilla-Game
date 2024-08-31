@@ -205,6 +205,11 @@ class IncreasePlayerSpeed extends PowerUp{
         this.value = value
     }
 
+    draw(){
+        super.draw()
+        ctx.drawImage(lightningImage, this.x-15, this.y-15, this.size+30, this.size+30)
+    }
+
     power(){
         let lastPlayerSpeed = playerSpeed
         player.speed = this.value
