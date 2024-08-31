@@ -1,0 +1,13 @@
+const DEBUG_MODE = false
+let maxEnemies = 5
+let enemiesSpeed = 1
+let playerSpeed = 2
+let increaseShottingSpeed = false
+let increasePlayerSpeedPowerUpActive = false
+let speedEnemiesPowerUpActive = false
+let maxLevelReached = false
+let increaseDificultyIntervalInMaxLevel = null
+let keys = {} //track the keyboard keys that are being pressed
+let enemies = []
+let bullets = []
+let powerUps = []

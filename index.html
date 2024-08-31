@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Vanilla Survivor Game</title>
+    <link rel="stylesheet" href="./index.css"/>
+</head>
+<body>
+    <canvas width="1600" height="900"></canvas>
+    <section class="score-container">Score: <span id = "score">0</span></section>
+    <button id = "show-controls-button" class = "show-controls-button" onclick="showGameControls()">🎮</button>
+    <section id = "debug-values-container" class = "debug-values-container">
+        <div>Speed: <span id = "debug-speed-value">0</span></div>
+        <div>Enemies: <span id = "debug-enemies-values">0</span></div>
+        <div>Enemies Speed: <span id = "debug-enemies-speed-values">0</span></div>
+    </section>
+</body>
+<script type="text/javascript" src = "./variables.js"></script>
+<script type="text/javascript" src = "./gameFunctions.js"></script>
+<script type="text/javascript" src = "./events.js"></script>
+<script type="text/javascript" src = "./Entities.js"></script>
+<script type="text/javascript" src = "./index.js"></script>
+</html>

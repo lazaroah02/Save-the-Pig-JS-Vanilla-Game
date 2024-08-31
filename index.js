@@ -1,0 +1,22 @@
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
+
+//UI Elements
+const score = document.getElementById('score');
+const debugSpeedValue = document.getElementById('debug-speed-value');
+const debugEnemiesValue = document.getElementById('debug-enemies-values');
+const debugEnemiesSpeedValue = document.getElementById('debug-enemies-speed-values');
+const showControlsButton = document.getElementById('show-controls-button');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let player = new Player(canvas.width/2, canvas.height/2, 30, playerSpeed, "white")
+
+if(DEBUG_MODE === false){
+    document.getElementById("debug-values-container").style.display = 'none'
+}
+
+update()
+setInterval(spawnEnemies, 1000)
+setInterval(spawnPowerUps, 4000)
