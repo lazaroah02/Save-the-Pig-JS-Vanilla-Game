@@ -88,15 +88,16 @@ class Bullet extends Entity{
         this.xTo = xTo
         this.yTo = yTo
 
-        // Calcular la dirección del movimiento (Fisica de Vectores(Algoritmo explicado en el Readme))
-        //diferencia entre las coordenadas
+        // Calculate the direction of movement (Vector Physics (Algorithm explained in 'Algorithm move bullet from A to B.txt'))
+        // difference between the coordinates
         const dx = xTo - x;
         const dy = yTo - y; 
-        //Distancia Euclidiana (distancia entre dos puntos en el plano)
+        // Euclidean Distance (distance between two points in the plane)
         const distance = Math.sqrt(dx * dx + dy * dy);
-        //desplazamiento * velocidad
+        // displacement * speed
         this.vx = (dx / distance) * speed;
         this.vy = (dy / distance) * speed;
+
     }
 
     move(){
