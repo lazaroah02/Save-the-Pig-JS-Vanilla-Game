@@ -164,25 +164,25 @@ function increaseDificulty(){
         null
     }
     else if(actualScore > 10 && actualScore < 20){
-        !speedEnemiesPowerUpActive?enemiesSpeed = 1.2:null
+        !speedEnemiesPowerUpActive?enemiesSpeed = 1.1:null
         maxEnemies = 6
-        increasePlayerSpeedPowerUpActive? playerSpeed = 5: null
+        !increasePlayerSpeedPowerUpActive? playerSpeed = 3: null
     }
     else if(actualScore > 20 && actualScore < 30){
         !speedEnemiesPowerUpActive?enemiesSpeed = 1.3:null
         maxEnemies = 7
-        increasePlayerSpeedPowerUpActive? playerSpeed = 8: null
+        !increasePlayerSpeedPowerUpActive? playerSpeed = 5: null
     }
     else if(actualScore > 30 && actualScore < 40){
         !speedEnemiesPowerUpActive?enemiesSpeed = 1.5:null
         maxEnemies = 8
-        increasePlayerSpeedPowerUpActive? playerSpeed = 12: null
+        !increasePlayerSpeedPowerUpActive? playerSpeed = 7: null
     }else{
         if(maxLevelReached === false){
             increaseDificultyIntervalInMaxLevel = setInterval(() => {
                 !speedEnemiesPowerUpActive?enemiesSpeed += 0.1:null
                 maxEnemies += 1
-                increasePlayerSpeedPowerUpActive? playerSpeed += 1: null
+                !increasePlayerSpeedPowerUpActive? playerSpeed += 0.5: null
             }, 10000)
             maxLevelReached = true
         }

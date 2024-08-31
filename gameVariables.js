@@ -1,4 +1,4 @@
-const DEBUG_MODE = false
+const DEBUG_MODE = true
 let maxEnemies = 5
 let enemiesSpeed = 1
 let playerSpeed = 2

@@ -49,6 +49,7 @@ class Player extends Entity{
     }
     
     update(){
+        this.speed = playerSpeed
         this.draw()
         this.checkBoardCollision()
     }
@@ -86,6 +87,7 @@ class Enemy extends Entity{
     }
 
     update(player){
+        this.speed = enemiesSpeed
         this.move(player)
         this.draw()
     }
@@ -168,10 +170,10 @@ class PowerUp extends Entity{
 }
 
 class DecreaseEnemiesSpeed extends PowerUp{
-    constructor(x, y, size, color, duration = 3000, value = 0.1){
+    constructor(x, y, size, color, duration = 3000, enemiesSpeedValue = 0.1){
         super(x, y, size, color)
         this.duration = duration
-        this.enemiesSpeed = value
+        this.enemiesSpeedValue = value
     }
 
     draw(){
@@ -181,12 +183,11 @@ class DecreaseEnemiesSpeed extends PowerUp{
 
     power(){
         let lastEnemiesSpeed = enemiesSpeed
-        enemiesSpeed = this.enemiesSpeed
-        enemies.forEach(enemy => enemy.speed = this.enemiesSpeed)
+        enemiesSpeed = this.enemiesSpeedValue
         speedEnemiesPowerUpActive = true
         setTimeout(() => {
             speedEnemiesPowerUpActive = false
-            enemies.forEach(enemy => enemy.speed = lastEnemiesSpeed)
+            enemiesSpeed = lastEnemiesSpeed
         }, this.duration)
     }
 }
@@ -209,10 +210,10 @@ class IncreaseShuttingSpeed extends PowerUp{
 }
 
 class IncreasePlayerSpeed extends PowerUp{
-    constructor(x, y, size, color, duration = 5000, value = 10){
+    constructor(x, y, size, color, duration = 5000, playerSpeedValue = 10){
         super(x, y, size, color)
         this.duration = duration
-        this.value = value
+        this.playerSpeedValue = playerSpeedValue
     }
 
     draw(){
@@ -222,10 +223,10 @@ class IncreasePlayerSpeed extends PowerUp{
 
     power(){
         let lastPlayerSpeed = playerSpeed
-        player.speed = this.value
-        playerSpeed = this.value
+        playerSpeed = this.playerSpeedValue
+        increasePlayerSpeedPowerUpActive = true
         setTimeout(() => {
-            player.speed = lastPlayerSpeed
+            increasePlayerSpeedPowerUpActive = false
             playerSpeed = lastPlayerSpeed
         }, this.duration)
     }
